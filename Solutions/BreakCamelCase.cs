@@ -2,11 +2,11 @@
 
 namespace Solutions
 {
-    public class BreakCamelCase : BaseSolution<String>
+    public class BreakCamelCase
     {
-        public override string Handle(object obj)
+        public static string Solution(string entry)
         {
-            return string.Concat(obj.ToString().Select(c => Char.IsUpper(c) ? " " + c : c.ToString()));
+            return string.Concat(entry.ToString().Select(c => Char.IsUpper(c) ? " " + c : c.ToString()));
         }
     }
 }

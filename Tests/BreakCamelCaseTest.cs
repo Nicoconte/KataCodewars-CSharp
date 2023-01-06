@@ -4,17 +4,16 @@ namespace Tests
 {
     public class BreakCamelCaseTest
     {
-        private BreakCamelCase _solution;
 
         public BreakCamelCaseTest()
         {
-            _solution = new BreakCamelCase();
+
         }
 
         [Fact]
-        public void Test_EmptyValue()
+        public void Test_ShouldReturnEmptyValue()
         {
-            string response = _solution.Handle("");
+            string response = BreakCamelCase.Solution("");
 
             Assert.Equal(String.Empty, response);
         }
@@ -22,7 +21,7 @@ namespace Tests
         [Fact]
         public void Test_ShouldReturnStringWithNoSpaces()
         {
-            string response = _solution.Handle("sasybaka");
+            string response = BreakCamelCase.Solution("sasybaka");
 
             Assert.Equal("sasybaka", response);
         }
@@ -30,7 +29,7 @@ namespace Tests
         [Fact]
         public void Test_ShouldReturnStringWithEmptySpaces()
         {
-            string response = _solution.Handle("estoEsCamelCase");
+            string response = BreakCamelCase.Solution("estoEsCamelCase");
 
             Assert.Equal("esto Es Camel Case", response);
         }
